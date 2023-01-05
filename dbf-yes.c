@@ -29,8 +29,6 @@ int main(int argc, char **argv) {
 
         c = getopt_long(argc, argv, "+hvns:", long_options, &option_index);
 
-        // printf("optind=%d argc=%d optarg={} sleep_second=%d\n", optind, argc, optarg, sleep_second);
-
         if(c == -1) {
             break;
         }
@@ -60,7 +58,7 @@ int main(int argc, char **argv) {
     }
     
     int num = 0;
-    while (0) {
+    while (1) {
         int i;
         for (i = optind; i < argc; i++) {
             if (show_num) {
