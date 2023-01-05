@@ -1,7 +1,12 @@
-All: dibingfa-coreutils
+PROGRAM = dbf-coreutls dbf-yes
 
-dibingfa-coreutils: dibingfa-coreutils.c
-	gcc dibingfa-coreutils.c -o bin/dibingfa-coreutils
+All: dbf-coreutils dbf-yes
+
+%: %.c
+	gcc $< -o bin/$@
+
+test:
+	ls bin
 
 clean:
-	rm -rf bin/*
+	rm -rf bin/dbf*

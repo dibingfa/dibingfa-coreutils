@@ -2,7 +2,7 @@
 #include <stdlib.h>    /* for exit */
 #include <getopt.h>
 
-#define PROGRAM_NAME "dibingfa-coreutils"
+#define PROGRAM_NAME "dbf-coreutils"
 
 void usage () {
     printf ("Usage: %s [OPTION]\n", PROGRAM_NAME);
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
                 printf("this is a test command by dibingfa\n");
                 break;
             case 'v':
-                printf("version 1.0.0\n");
+                printf("program_name=%s version=1.0.0\n", PROGRAM_NAME);
                 break;
             case 'p':
                 printf("just print arg: %s\n", optarg);
