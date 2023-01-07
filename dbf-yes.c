@@ -56,6 +56,14 @@ int main(int argc, char **argv) {
     if (!print_char) {
         exit(EXIT_SUCCESS);
     }
+
+    if (optind <= argc) {
+        while (1) {
+            fputc ('y', stdout);
+            putchar('\n');
+            sleep (sleep_second);
+        }
+    }
     
     int num = 0;
     while (1) {
@@ -70,5 +78,5 @@ int main(int argc, char **argv) {
         sleep (sleep_second);
     }
 
-   exit(EXIT_SUCCESS);
+    exit(EXIT_SUCCESS);
 }

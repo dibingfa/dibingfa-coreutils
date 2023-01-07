@@ -1,6 +1,6 @@
-PROGRAM = dbf-coreutls dbf-yes
+PROGRAM = dbf-coreutils dbf-yes
 
-All: dbf-coreutils dbf-yes
+all: $(PROGRAM)
 
 %: %.c
 	gcc $< -o bin/$@
