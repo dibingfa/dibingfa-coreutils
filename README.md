@@ -30,13 +30,14 @@ make
 {
     "version": "0.2.0",
     "configurations": [
+
         {
-            "type": "gdb",
+            "type": "cppdbg",
             "request": "launch",
             "name": "GDB",
-            "program": "${workspaceFolder}/src/echo",
-            "stopOnEntry": false,
-            "arguments": "hello"
+            "program": "${workspaceFolder}/src/yes",
+            "cwd": "${workspaceFolder}",
+            "args": ["-s", "1", "hello"]
         }
     ]
 }
