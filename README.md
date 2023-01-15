@@ -22,7 +22,7 @@ CFLAGS = -g -O0
 
 第四步
 ```
-make CFLAGS='-Wno-error=suggest-attribute=const' -j4
+make
 ```
 
 第五步：VS Code 配置 launcher.json
