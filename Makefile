@@ -3,7 +3,7 @@ PROGRAM = dbf-coreutils dbf-yes
 all: $(PROGRAM)
 
 %: %.c
-	gcc $< -o bin/$@
+	gcc -g -O0 $< -o bin/$@
 
 test:
 	ls bin

@@ -57,15 +57,18 @@ int main(int argc, char **argv) {
         exit(EXIT_SUCCESS);
     }
 
+    int num = 0;
+
     if (optind <= argc) {
         while (1) {
-            fputc ('y', stdout);
-            putchar('\n');
+            if (show_num) {
+                printf("%d ", num++);
+            }
+            puts("y");
             sleep (sleep_second);
         }
     }
     
-    int num = 0;
     while (1) {
         int i;
         for (i = optind; i < argc; i++) {
