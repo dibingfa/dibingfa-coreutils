@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "GDB",
+            "program": "${workspaceFolder}/bin/dbf-yes",
+            "cwd": "${workspaceFolder}",
+            "args": ["-s", "1", "hello"]
+        }
+    ]
+}
