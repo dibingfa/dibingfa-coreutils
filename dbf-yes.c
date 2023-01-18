@@ -1,4 +1,4 @@
-fefe#include <stdio.h>     /* for printf */
+#include <stdio.h>     /* for printf */
 #include <stdlib.h>    /* for exit */
 #include <getopt.h>
 
