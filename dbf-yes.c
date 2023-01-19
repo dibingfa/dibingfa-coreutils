@@ -4,9 +4,14 @@
 #define PROGRAM_NAME "dbf-yes"
 
 void usage() {
-    printf("Usage: %s [STRING]...\n", PROGRAM_NAME);
-    puts("-n,--num          show line number");
-    puts("-s,--sleep=NUM    sleep NUM seconds between");
+    print_basic_usage(PROGRAM_NAME);
+    puts("Repeatedly output a line with all specified STRING(s), or 'y'.");
+    puts("");
+    puts("  -n, --num          show line number");
+    puts("  -s, --sleep=NUM    sleep NUM seconds between");
+    puts(HELP_OPTION_DESCRIPTION);
+    puts(VERSION_OPTION_DESCRIPTION);
+    print_more_info(PROGRAM_NAME);
     exit(EXIT_SUCCESS);
 }
 

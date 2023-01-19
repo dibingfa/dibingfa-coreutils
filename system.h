@@ -18,16 +18,28 @@ enum {
         exit (EXIT_SUCCESS);
 
 #define HELP_OPTION_DESCRIPTION \
-    "      --help        display this help and exit\n"
+    "      --help        display this help and exit"
 #define VERSION_OPTION_DESCRIPTION \
-    "      --version     output version information and exit\n"
+    "      --version     output version information and exit"
 
 #define GETOPT_HELP_OPTION_DECL \
   "help", no_argument, NULL, GETOPT_HELP_CHAR
 #define GETOPT_VERSION_OPTION_DECL \
   "version", no_argument, NULL, GETOPT_VERSION_CHAR
 
+
+static inline void print_basic_usage(char * program_name) {
+    printf("Usage: %s [STRING]...\n", program_name);
+}
+
 static inline void print_try_help(char * program_name) {
     fprintf (stderr, "Try '%s --help' for more information.\n", program_name);
+    exit (EXIT_FAILURE);
+}
+
+static inline void print_more_info(char * program_name) {
+    printf("\ncoreutils by dibingfa program:%s\n", program_name);
+    puts("github: <https://github.com/dibingfa/dibingfa-coreutils>");
+    puts("wechat: dibingfa");
     exit (EXIT_FAILURE);
 }
