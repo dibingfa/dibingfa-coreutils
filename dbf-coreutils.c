@@ -4,7 +4,7 @@
 #define PROGRAM_NAME "dbf-coreutils"
 
 void usage () {
-    print_basic_usage(PROGRAM_NAME);
+    printf("Usage: %s\n", PROGRAM_NAME);
     puts("Template program only help or version.");
     puts("");
     

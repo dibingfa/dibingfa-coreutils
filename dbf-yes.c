@@ -4,7 +4,7 @@
 #define PROGRAM_NAME "dbf-yes"
 
 void usage() {
-    print_basic_usage(PROGRAM_NAME);
+    printf("Usage: %s [SHORT-OPTION]... [STRING]...\n", PROGRAM_NAME);
     puts("Repeatedly output a line with all specified STRING(s), or 'y'.");
     puts("");
     puts("  -n, --num          show line number");
