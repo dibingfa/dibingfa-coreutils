@@ -1,85 +1,57 @@
-#include <stdio.h>     /* for printf */
-#include <stdlib.h>    /* for exit */
+#include "system.h"
 #include <getopt.h>
 
 #define PROGRAM_NAME "dbf-yes"
 
-void usage () {
-    printf ("Usage: %s [OPTION]\n", PROGRAM_NAME);
-    printf ("Try '%s -h' or '%s --help' for more information\n", PROGRAM_NAME, PROGRAM_NAME);
+void usage() {
+    printf("Usage: %s [STRING]...\n", PROGRAM_NAME);
+    puts("-n,--num          show line number");
+    puts("-s,--sleep=NUM    sleep NUM seconds between");
+    exit(EXIT_SUCCESS);
 }
 
+static struct option long_options[] = {{"num", no_argument, 0, 'n'},
+                                       {"sleep", required_argument, 0, 's'},
+                                       {GETOPT_HELP_OPTION_DECL},
+                                       {GETOPT_VERSION_OPTION_DECL},
+                                       {0, 0, 0, 0}};
+
 int main(int argc, char **argv) {
-    int c;
-    int digit_optind = 0;
-    int show_num = 0;
+    int optc;
+    int show_num = false;
     int sleep_second = 0;
-    int print_char = 1;
 
-    while (1) {
-        int this_option_optind = optind ? optind : 1;
-        int option_index = 0;
-        static struct option long_options[] = {
-            {"help",    no_argument,        0,  'h' },
-            {"version", no_argument,        0,  'v' },
-            {"num",     no_argument,        0,  'n' },
-            {"sleep",   required_argument,  0,  's' },
-            {0,0,0,0}
-        };
-
-        c = getopt_long(argc, argv, "+hvns:", long_options, &option_index);
-
-        if(c == -1) {
-            break;
-        }
-
-        switch (c) {
-            case 'h': 
-                printf("this is a test command by dibingfa\n");
-                print_char = 0;
-                break;
-            case 'v':
-                printf("program_name=%s version=1.0.0\n", PROGRAM_NAME);
-                print_char = 0;
-                break;
-            case 'n': 
-                show_num = 1;
-                break;
-            case 's': 
+    while ((optc = getopt_long(argc, argv, "ns:", long_options, NULL)) != -1) {
+        int a = optind;
+        switch (optc) {
+            case 'n': show_num = true; break;
+            case 's':
                 sleep_second = atoi(optarg);
                 break;
-            default:
-                break;
+                case_GETOPT_HELP_CHAR;
+                case_GETOPT_VERSION_CHAR(PROGRAM_NAME);
+            default: print_try_help(PROGRAM_NAME);
         }
-    }
-
-    if (!print_char) {
-        exit(EXIT_SUCCESS);
     }
 
     int num = 0;
 
-    if (optind <= argc) {
-        while (1) {
-            if (show_num) {
-                printf("%d ", num++);
-            }
-            puts("y");
-            sleep (sleep_second);
-        }
+    if (argc <= optind) {
+        optind = argc;
+        argv[argc++] = "y";
     }
-    
+
     while (1) {
         int i;
         for (i = optind; i < argc; i++) {
             if (show_num) {
                 printf("%d ", num++);
             }
-            fputs (argv[i], stdout);
-            putchar (i == argc - 1 ? '\n' : ' ');
+            fputs(argv[i], stdout);
+            putchar(i == argc - 1 ? '\n' : ' ');
         }
-        sleep (sleep_second);
+        sleep(sleep_second);
     }
 
-    exit(EXIT_SUCCESS);
+    return EXIT_SUCCESS;
 }

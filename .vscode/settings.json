@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "*.s": "nasm",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "getopt.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
     }
 }
