@@ -5,7 +5,119 @@ gnu coreutils: https://github.com/coreutils/coreutils
 
 man 3 getopt: https://linux.die.net/man/3/getopt
 
-### coreutils 编译
+## 进度表
+
+- [ ] b2sum
+- [ ] base32
+- [ ] base64
+- [ ] basename
+- [ ] basenc
+- [ ] blake2
+- [ ] cat
+- [ ] chcon
+- [ ] chgrp
+- [ ] chmod
+- [ ] chown
+- [ ] chroot
+- [ ] cksum
+- [ ] comm
+- [ ] cp
+- [ ] csplit
+- [ ] cut
+- [ ] date
+- [ ] dd
+- [ ] df
+- [ ] dir
+- [ ] dircolors
+- [ ] dirname
+- [ ] du
+- [ ] echo
+- [ ] env
+- [ ] expand
+- [ ] expr
+- [ ] factor
+- [ ] false
+- [ ] fmt
+- [ ] fold
+- [ ] getlimits
+- [ ] ginstall
+- [ ] groups
+- [ ] head
+- [ ] hostid
+- [ ] id
+- [ ] join
+- [ ] kill
+- [ ] link
+- [ ] ln
+- [ ] local.mk
+- [ ] logname
+- [ ] ls
+- [ ] make-prime-list
+- [ ] md5sum
+- [ ] mkdir
+- [ ] mkfifo
+- [ ] mknod
+- [ ] mktemp
+- [ ] mv
+- [ ] nice
+- [ ] nl
+- [ ] nohup
+- [ ] nproc
+- [ ] numfmt
+- [ ] od
+- [ ] paste
+- [ ] pathchk
+- [ ] pinky
+- [ ] pr
+- [ ] printenv
+- [ ] printf
+- [ ] ptx
+- [ ] pwd
+- [ ] readlink
+- [ ] realpath
+- [ ] rm
+- [ ] rmdir
+- [ ] runcon
+- [ ] seq
+- [ ] sha1sum
+- [ ] sha224sum
+- [ ] sha256sum
+- [ ] sha384sum
+- [ ] sha512sum
+- [ ] shred
+- [ ] shuf
+- [ ] sleep
+- [ ] sort
+- [ ] split
+- [ ] stat
+- [ ] stdbuf
+- [ ] stty
+- [ ] sum
+- [ ] sync
+- [ ] tac
+- [ ] tail
+- [ ] tee
+- [ ] test
+- [ ] timeout
+- [ ] touch
+- [ ] tr
+- [ ] true
+- [ ] truncate
+- [ ] tsort
+- [ ] tty
+- [ ] uname
+- [ ] unexpand
+- [ ] uniq
+- [ ] unlink
+- [ ] uptime
+- [ ] users
+- [ ] vdir
+- [ ] wc
+- [ ] who
+- [ ] whoami
+- [x] **yes**：-n（show line number）-s（sleep NUM seconds between）
+
+## coreutils 编译
 
 第一步：ubuntu 16.04
 
