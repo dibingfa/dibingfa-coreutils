@@ -1,7 +1,8 @@
-#include <stdio.h>     /* for printf */
-#include <stdlib.h>    /* for exit */
-#include <limits.h>
-#include <stdbool.h>
+#include <stdio.h>    /* for printf */
+#include <stdlib.h>   /* for exit */
+#include <limits.h>   /* for CHAR_MIN */
+#include <stdbool.h>  /* for bool */
+#include <unistd.h>   /* for sleep */
 
 enum {
   GETOPT_HELP_CHAR = (CHAR_MIN - 2),

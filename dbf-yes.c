@@ -33,8 +33,8 @@ int main(int argc, char **argv) {
             case 's':
                 sleep_second = atoi(optarg);
                 break;
-                case_GETOPT_HELP_CHAR;
-                case_GETOPT_VERSION_CHAR(PROGRAM_NAME);
+            case_GETOPT_HELP_CHAR;
+            case_GETOPT_VERSION_CHAR(PROGRAM_NAME);
             default: print_try_help(PROGRAM_NAME);
         }
     }

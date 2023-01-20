@@ -31,7 +31,7 @@ man 3 getopt: https://linux.die.net/man/3/getopt
 - [ ] dircolors
 - [ ] dirname
 - [ ] du
-- [ ] echo
+- [x] **echo**: -r -b -g etc for red blue green to print String
 - [ ] env
 - [ ] expand
 - [ ] expr
@@ -115,7 +115,7 @@ man 3 getopt: https://linux.die.net/man/3/getopt
 - [ ] wc
 - [ ] who
 - [ ] whoami
-- [x] **yes**：-n（show line number）-s（sleep NUM seconds between）
+- [x] **yes**: -n（show line number）-s（sleep NUM seconds between）
 
 ## coreutils 编译
 

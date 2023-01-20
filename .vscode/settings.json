@@ -5,6 +5,7 @@
         "getopt.h": "c",
         "stdio.h": "c",
         "stdlib.h": "c",
-        "system.h": "c"
+        "system.h": "c",
+        "unistd.h": "c"
     }
 }
