@@ -1,11 +1,18 @@
 {
     "files.associations": {
+        "*.gmk": "makefile",
         "*.s": "nasm",
         "cstdlib": "c",
         "getopt.h": "c",
         "stdio.h": "c",
         "stdlib.h": "c",
         "system.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "ioctl.h": "c",
+        "ioctls.h": "c",
+        "ttydefaults.h": "c",
+        "ioctl-types.h": "c",
+        "fcntl.h": "c",
+        "fcntl-linux.h": "c"
     }
 }

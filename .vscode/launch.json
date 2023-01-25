@@ -6,9 +6,9 @@
             "request": "launch",
             "name": "GDB",
             "preLaunchTask": "make",
-            "program": "${workspaceFolder}/bin/dbf-yes",
+            "program": "${workspaceFolder}/bin/dbf-cat",
             "cwd": "${workspaceFolder}",
-            "args": ["-s", "world"]
+            "args": ["dbf-cat.c"]
         }
     ]
 }

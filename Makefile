@@ -1,4 +1,4 @@
-PROGRAM = dbf-coreutils dbf-yes dbf-echo
+PROGRAM = dbf-coreutils dbf-yes dbf-echo dbf-cat
 
 all: $(PROGRAM)
 

@@ -1,7 +1,8 @@
 #include "system.h"
 #include <getopt.h>
+#include <fcntl.h>
 
-#define PROGRAM_NAME "dbf-yes"
+#define PROGRAM_NAME "dbf-cat"
 
 void usage() {
     printf("Usage: %s [SHORT-OPTION]... [STRING]...\n", PROGRAM_NAME);
@@ -15,7 +16,7 @@ void usage() {
     exit(EXIT_SUCCESS);
 }
 
-static struct option long_options[] = {{"num", no_argument, 0, 'n'},
+static struct option long_options[] = {{"number", no_argument, 0, 'n'},
                                        {"sleep", required_argument, 0, 's'},
                                        {GETOPT_HELP_OPTION_DECL},
                                        {GETOPT_VERSION_OPTION_DECL},
@@ -39,23 +40,21 @@ int main(int argc, char **argv) {
         }
     }
 
-    int num = 0;
+    int argind = optind;
+    int insize = 1024;
 
-    if (argc <= optind) {
-        optind = argc;
-        argv[argc++] = "y";
-    }
-
-    while (1) {
-        int i;
-        for (i = optind; i < argc; i++) {
-            if (show_num) {
-                printf("%d ", num++);
+    while(argind < argc) {
+        char *infile = argv[argind++];
+        int infd = open(infile, O_RDONLY);
+        void *inbuf = malloc(insize);
+        while(true) {
+           size_t n_read = read(infd, inbuf, insize);
+            if(n_read == 0) {
+                break;
             }
-            fputs(argv[i], stdout);
-            putchar(i == argc - 1 ? '\n' : ' ');
+            usleep(sleep_microsecond);
+            write(STDOUT_FILENO, inbuf, n_read);
         }
-        usleep(sleep_microsecond);
     }
 
     return EXIT_SUCCESS;
