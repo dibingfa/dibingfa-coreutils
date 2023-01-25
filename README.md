@@ -7,12 +7,7 @@ man 3 getopt: https://linux.die.net/man/3/getopt
 
 ## 进度表
 
-- [ ] b2sum
-- [ ] base32
-- [ ] base64
 - [ ] basename
-- [ ] basenc
-- [ ] blake2
 - [ ] cat
 - [ ] chcon
 - [ ] chgrp
