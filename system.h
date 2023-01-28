@@ -3,6 +3,10 @@
 #include <limits.h>   /* for CHAR_MIN */
 #include <stdbool.h>  /* for bool */
 #include <unistd.h>   /* for sleep */
+#include <string.h>   /* for stpcpy */
+
+#define min(h, i) ((h) < (i) ? (h) : (i))
+#define max(h, i) ((h) > (i) ? (h) : (i))
 
 enum {
   GETOPT_HELP_CHAR = (CHAR_MIN - 2),

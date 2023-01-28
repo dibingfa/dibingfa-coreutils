@@ -23,7 +23,7 @@ static struct option long_options[] = {{"num", no_argument, 0, 'n'},
 
 int main(int argc, char **argv) {
     int optc;
-    int show_num = false;
+    bool show_num = false;
     int sleep_microsecond = 0;
 
     while ((optc = getopt_long(argc, argv, "ns:", long_options, NULL)) != -1) {

@@ -8,7 +8,7 @@
             "preLaunchTask": "make",
             "program": "${workspaceFolder}/bin/dbf-cat",
             "cwd": "${workspaceFolder}",
-            "args": ["dbf-cat.c"]
+            "args": ["dbf-cat.c", "-n"]
         }
     ]
 }
