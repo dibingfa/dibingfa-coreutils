@@ -142,9 +142,9 @@ make
             "type": "cppdbg",
             "request": "launch",
             "name": "GDB",
-            "program": "${workspaceFolder}/src/yes",
+            "program": "${workspaceFolder}/src/echo",
             "cwd": "${workspaceFolder}",
-            "args": ["-s", "1", "hello"]
+            "args": ["hello"]
         }
     ]
 }
